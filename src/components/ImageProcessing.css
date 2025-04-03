@@ -1,0 +1,480 @@
+/* Batch Uploader Styles */
+.batch-uploader {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.dropzone {
+  border: 2px dashed #646cff;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dropzone.active {
+  border-color: #535bf2;
+  background-color: rgba(100, 108, 255, 0.1);
+}
+
+.dropzone p {
+  margin: 0.5rem 0;
+}
+
+.file-info {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.preview-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.preview-item {
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.5rem;
+}
+
+.preview-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.remove-button {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #ff4444;
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  padding: 0;
+  line-height: 1;
+}
+
+.image-name {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Processing Queue Styles */
+.processing-queue {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.queue-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.processing-status {
+  font-weight: 500;
+  color: #646cff;
+}
+
+.queue-controls {
+  display: flex;
+  gap: 1rem;
+}
+
+.start-button,
+.clear-button {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.start-button {
+  background-color: #646cff;
+  color: white;
+  border: none;
+}
+
+.start-button:hover {
+  background-color: #535bf2;
+}
+
+.clear-button {
+  background-color: transparent;
+  color: #ff4444;
+  border: 1px solid #ff4444;
+}
+
+.clear-button:hover {
+  background-color: #ff44441a;
+}
+
+.queue-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.queue-item {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.queue-item.processing {
+  border-color: #646cff;
+  background-color: rgba(100, 108, 255, 0.1);
+}
+
+.queue-item.completed {
+  border-color: #22cc22;
+  background-color: rgba(34, 204, 34, 0.1);
+}
+
+.queue-item.error {
+  border-color: #ff4444;
+  background-color: rgba(255, 68, 68, 0.1);
+}
+
+.item-preview {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 0.5rem;
+}
+
+.item-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.item-status {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.queue-item.processing .item-status {
+  color: #646cff;
+}
+
+.queue-item.completed .item-status {
+  color: #22cc22;
+}
+
+.queue-item.error .item-status {
+  color: #ff4444;
+}
+
+/* Quick Actions Styles */
+.quick-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.action-button {
+  padding: 0.8rem 1.5rem;
+  border: 2px solid #646cff;
+  border-radius: 4px;
+  background: transparent;
+  color: #646cff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+  min-width: 150px;
+  font-weight: 500;
+}
+
+.action-button:hover {
+  background: rgba(100, 108, 255, 0.1);
+}
+
+.action-button.active {
+  background: #646cff;
+  color: white;
+}
+
+/* Batch Actions Styles */
+.batch-actions {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ccc;
+}
+
+.send-to-imgly-button {
+  padding: 1rem 2rem;
+  background: #22cc22;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.send-to-imgly-button:hover {
+  background: #1fb01f;
+}
+
+/* General container */
+.gemini-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Section Styles with Numbers */
+.action-selection,
+.image-upload-section,
+.processing-section,
+.final-actions {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background-color: #f9f9f9;
+  margin-bottom: 1.5rem;
+}
+
+.action-selection h3,
+.image-upload-section h3,
+.processing-section h3,
+.final-actions h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+/* API Key Input */
+.api-key-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Quick Action Buttons */
+.quick-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.action-button {
+  padding: 0.75rem 1rem;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.action-button:hover {
+  background-color: #e0e0e0;
+}
+
+.action-button.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #0069d9;
+}
+
+.action-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Processing Controls */
+.processing-controls {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.process-button,
+.send-to-imgly-button {
+  padding: 0.75rem 1.5rem;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.process-button:hover,
+.send-to-imgly-button:hover {
+  background-color: #218838;
+}
+
+.process-button:disabled,
+.send-to-imgly-button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.cancel-button {
+  padding: 0.75rem 1.5rem;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.cancel-button:hover {
+  background-color: #c82333;
+}
+
+.clear-button {
+  padding: 0.75rem 1.5rem;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.clear-button:hover {
+  background-color: #5a6268;
+}
+
+.clear-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Processing Status */
+.processing-status {
+  background-color: #f8f9fa;
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  border-left: 4px solid #007bff;
+}
+
+/* Error Message */
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  border-left: 4px solid #dc3545;
+}
+
+/* Image Preview Grid */
+.images-preview {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.image-item {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  background: white;
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.image-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.image-preview {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #f0f0f0;
+}
+
+.image-preview img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.image-status {
+  padding: 0.5rem;
+  text-align: center;
+  background-color: #f8f9fa;
+  border-top: 1px solid #eee;
+  font-size: 0.85rem;
+  color: #6c757d;
+}
+
+/* Status colors */
+.image-item.queued .image-status {
+  background-color: #f8f9fa;
+  color: #6c757d;
+}
+
+.image-item.processing .image-status {
+  background-color: #cce5ff;
+  color: #004085;
+}
+
+.image-item.completed .image-status {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.image-item.error .image-status {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Add styles for download button in image items */
+.image-item .download-button {
+  margin: 0.5rem auto 0.75rem;
+  display: block;
+  width: calc(100% - 1rem);
+  text-align: center;
+  font-size: 0.85rem;
+  padding: 0.4rem 0;
+}

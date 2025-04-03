@@ -1,0 +1,403 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.file-input {
+  margin: 2rem 0;
+  padding: 1rem;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 400px;
+}
+
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.image-box {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.process-button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+  background-color: #646cff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.process-button:hover {
+  background-color: #535bf2;
+}
+
+.loading {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #646cff;
+}
+
+.config-section {
+  margin: 2rem auto;
+  max-width: 600px;
+  padding: 1rem;
+  background: #f5f5f5;
+  border-radius: 8px;
+}
+
+.config-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.config-group label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.config-group select,
+.config-group input[type="range"] {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: white;
+}
+
+.config-group input[type="range"] {
+  margin: 0;
+}
+
+.config-group span {
+  min-width: 2.5em;
+  text-align: center;
+}
+
+.tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1rem;
+}
+
+.tab-button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+  background-color: transparent;
+  color: #646cff;
+  border: 2px solid #646cff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.tab-button:hover {
+  background-color: #646cff15;
+}
+
+.tab-button.active {
+  background-color: #646cff;
+  color: white;
+}
+
+.gemini-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.api-key-input,
+.prompt-input {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.prompt-input {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.error-message {
+  color: #ff4444;
+  padding: 1rem;
+  background-color: #ff44441a;
+  border-radius: 4px;
+  margin: 1rem 0;
+}
+
+.response-section {
+  margin-top: 2rem;
+}
+
+.image-container img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.text-container {
+  background: #f5f5f5;
+  padding: 1rem;
+  border-radius: 4px;
+  margin: 1rem 0;
+  white-space: pre-wrap;
+}
+
+.model-selection {
+  margin-bottom: 1rem;
+}
+
+.imagen-config {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f5f5f5;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.imagen-config label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.imagen-config input[type="number"] {
+  width: 60px;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.generated-images-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.generated-image-container {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.generated-image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Gemini Import Section */
+.gemini-import-section {
+  background-color: #e6f7ff;
+  border: 1px solid #91d5ff;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.gemini-import-section h3 {
+  color: #1890ff;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.gemini-controls {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.gemini-load-button {
+  background-color: #1890ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.gemini-load-button:hover {
+  background-color: #096dd9;
+}
+
+.next-image-button {
+  background-color: #52c41a;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  margin-top: 1rem;
+  transition: background-color 0.2s;
+}
+
+.next-image-button:hover {
+  background-color: #389e0d;
+}
+
+.download-button {
+  display: inline-block;
+  background-color: #722ed1;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.download-button:hover {
+  background-color: #531dab;
+}
+
+/* Batch Results Section */
+.batch-results-section {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: #f6ffed;
+  border: 1px solid #b7eb8f;
+  border-radius: 8px;
+}
+
+.batch-results-section h3 {
+  color: #52c41a;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.download-all-button {
+  background-color: #52c41a;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  margin: 1rem 0;
+  transition: background-color 0.2s;
+}
+
+.download-all-button:hover {
+  background-color: #389e0d;
+}
+
+.results-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.result-item {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.5rem;
+  background-color: white;
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.result-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnail {
+  width: 100%;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+.download-button.small {
+  padding: 0.4rem 0.75rem;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
