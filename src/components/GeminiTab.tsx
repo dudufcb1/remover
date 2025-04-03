@@ -1,7 +1,7 @@
-import { useState, useCallback, useEffect, useRef } from 'react';
+import { useState, useCallback, useRef } from 'react';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { ImageBatchUploader } from './ImageBatchUploader';
-import { ImageProcessingQueue, QueuedImage } from './ImageProcessingQueue';
+import { QueuedImage } from './ImageProcessingQueue';
 import './ImageProcessing.css';
 
 // API rate limiting - Track recent calls to prevent 429 errors
@@ -323,27 +323,27 @@ export const GeminiTab = () => {
 
         <div className="action-selection">
           <h3>1. Select Action</h3>
-          <div className="quick-actions">
-            {quickActions.map(action => (
-              <button
-                key={action.id}
-                onClick={() => setSelectedAction(action)}
-                className={`action-button ${selectedAction.id === action.id ? 'active' : ''}`}
-                title={action.description}
+        <div className="quick-actions">
+          {quickActions.map(action => (
+            <button
+              key={action.id}
+              onClick={() => setSelectedAction(action)}
+              className={`action-button ${selectedAction.id === action.id ? 'active' : ''}`}
+              title={action.description}
                 disabled={isProcessing}
-              >
-                {action.label}
-              </button>
-            ))}
+            >
+              {action.label}
+            </button>
+          ))}
           </div>
         </div>
 
         <div className="image-upload-section">
           <h3>2. Upload Images</h3>
-          <ImageBatchUploader
-            onImagesSelected={handleImagesSelected}
-            maxFiles={5}
-          />
+        <ImageBatchUploader
+          onImagesSelected={handleImagesSelected}
+          maxFiles={5}
+        />
         </div>
 
         {error && (
